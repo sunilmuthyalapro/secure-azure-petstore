@@ -1,2 +1,2 @@
-# secure-azure-petstore
-A Zero Trust Architecture to the infamous Azure Petstore project
+# A Zero Trust Architecture to the infamous Azure Petstore project
+
