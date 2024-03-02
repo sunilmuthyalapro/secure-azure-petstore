@@ -2,6 +2,8 @@ Identity is a critical piece of ZTA in a cloud environment since there is no mor
 
 There are few personas considered here
 
+**User personas** \
+
 **1. Developer**\
    a. Role : Contributor\
    b. Asset access : Develop environments, Azure Devops respos, Azure container registry, Azure Functions(specific), and Cosmos DB\
