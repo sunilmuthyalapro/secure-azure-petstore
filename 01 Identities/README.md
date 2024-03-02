@@ -24,7 +24,7 @@ There are few personas considered here
    b. Asset :  Azure Security Center, Azure Monitor, and Log Analytics workspaces.\
    c. Managed identity usage: Security personnel need to monitor security posture, analyze logs, and enforce security policies. A managed identity with read access to security data and configurations across services is required.\
 
-Managed identities
+**Managed identities**
 
 For the project involving Azure Kubernetes Service (AKS), Azure Container Registry (ACR), Azure Functions, and Azure Cosmos DB, the following types of managed identities need to be created to ensure secure access management across different personas and services:
 
