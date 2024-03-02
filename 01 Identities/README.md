@@ -45,3 +45,33 @@ Each of these managed identities plays a critical role in ensuring that each per
 The identity controls seen here are applicable to both user principal and service principals running on a machine. Considering managed identities are for automation, they need to authenticate against services and this is achieved through key vaults.
 
 ![Identity](https://github.com/sunilmuthyalapro/secure-azure-petstore/assets/138375291/362d1248-39c8-471c-9717-e9b4f05246c7)
+
+
+**Authentication methods for users**
+
+Azure AD authentication methods best practices
+
+1. As part of policies in authentication methods, turn on microsoft authenticator. Configure the microsoft authenticator as below
+A. Allow user of MS authenticator OTP to yes
+B. Show application name in push and passwordless notification to be enabled and to all users
+C. Show geographic location in push and passwordless notification to enabled and to all users
+D. Enable MS authenticator on companion applications to enabled and to all users.
+
+Password protection
+1. Lockout threshold - 5
+2. Lockout duration in seconds - 120
+3. Custom banned passwords --> Enforce custom list --> Put in your custom list, which includes using your own company name in any format.
+4. Mode - Enforced
+
+Authentication strength
+
+1. Phishing resistant MFA
+
+a. Windows Hello for Business
+b. Passkeys (FIDO2)
+
+2. Passwordless MFA
+A. Authenticator (sign-in)
+
+3. MFA
+A. Password + Authenticator (Push notification)
