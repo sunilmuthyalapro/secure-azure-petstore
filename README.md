@@ -40,5 +40,11 @@ This reference architecture is built using the below technology pillars
 
 ![image](https://github.com/sunilmuthyalapro/secure-azure-petstore/assets/138375291/7dc90b0e-69bf-4a4f-a420-8771638589bc)
 
+There are some assumptions about this setup before creating/updating security controls:
+
+1. The entire setup is available only on Azure and there is no hybrid setup
+2. All users are working remotely
+3. There is a custom CASB solution already in place before any of the Azure native controls can be considered
+
 
 The controls are applied based on these technology pillars and the architecture diagrams will concentrate only on the assets and controls which each of these technology pillars will be applied. For example, in the identities folder, the architecture will show RBAC controls for the identities, but not show networking components. Let's get busy applying all these controls!
