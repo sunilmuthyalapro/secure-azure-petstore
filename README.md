@@ -43,8 +43,11 @@ This reference architecture is built using the below technology pillars
 There are some assumptions about this setup before creating/updating security controls:
 
 1. The entire setup is available only on Azure and there is no hybrid setup
-2. All users are working remotely
-3. There is a custom CASB solution already in place before any of the Azure native controls can be considered
+2. All users are working remotely but within Australia
+3. All users have corporate issued laptop which is Azure AD joined
+4. No mobile phones will be used as part of this project or work
+5. Combination of Windows and MacOS devices
+6. Approved applications are from M365
 
 
 The controls are applied based on these technology pillars and the architecture diagrams will concentrate only on the assets and controls which each of these technology pillars will be applied. For example, in the identities folder, the architecture will show RBAC controls for the identities, but not show networking components. Let's get busy applying all these controls!
