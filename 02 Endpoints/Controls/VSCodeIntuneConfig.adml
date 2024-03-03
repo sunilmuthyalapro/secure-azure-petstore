@@ -1,0 +1,46 @@
+<!--Import the original ADML file for VSCode from here : https://www.microsoft.com/en-us/download/details.aspx?id=104405 Ensure that the below policy sections are enabled/disabled appropriately -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0"
+  xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <displayName>Visual Studio</displayName>
+  <description>Manage features for Visual Studio with a focus on security and privacy.</description>
+  <resources>
+    <stringTable>
+      <!-- Simplified for brevity -->
+      <string id="VisualStudioProductName">Visual Studio</string>
+      <string id="VisualStudioCategoryName">Visual Studio</string>
+      <string id="PrivacySettingsCategoryName">Privacy Settings</string>
+
+      <!-- Policy Display Names and Explain Text -->
+      <!-- Feedback -->
+      <string id="DisableFeedbackDialog_DisplayName">Disable the send-a-smile feature</string>
+      <string id="DisableFeedbackDialog_Explain">This policy disables the Visual Studio send-a-smile feature.</string>
+      <string id="DisableScreenshotCapture_DisplayName">Disables send-a-smile's screenshot capability</string>
+      <string id="DisableScreenshotCapture_Explain">This policy disables the screenshot capability in the send-a-smile feature.</string>
+      
+      <!-- Privacy -->
+      <string id="TelemetryOptIn_DisplayName">Enable the Visual Studio Customer Experience Improvement Program</string>
+      <string id="TelemetryOptIn_Explain">This policy enables Visual Studio telemetry to be sent to Microsoft as part of the Visual Studio Customer Experience Improvement Program. For more information, see: https://aka.ms/vs/admx/telemetry</string>
+      <string id="IntelliCodeRemoteAnalysisDisabled_DisplayName">Disable IntelliCode custom model training</string>
+      <string id="IntelliCodeRemoteAnalysisDisabled_Explain">This policy disables the ability to train custom IntelliCode models for IntelliSense completions.</string>
+
+      <!-- LiveShare -->
+      <string id="LiveShare_DomainName_DisplayName">Allow only company domain accounts</string>
+      <string id="LiveShare_DomainName_Explain">Prevents users from being able to share their session with any guests who are not part of their company or any other company that has been given access. Users must be logged in with their company email to access Live Share. If this policy is disabled, any user from any organization can access a shared Live Share session. Use ; to separate out multiple domains. For example, set the domain name as contoso.com or contoso.com;foo.com 
+For more information, see: https://aka.ms/vsls-policies </string>
+      <string id="LiveShare_DisableAnonymousGuests_DisplayName">Disable anonymous guests</string>
+      <string id="LiveShare_DisableAnonymousGuests_Explain">Disallow anonymous guests from joining a session. Live Share already has the “Live Share: Anonymous Guest Approval” setting, and so this policy is effectively just enforcing that to “reject”.
+For more information, see: https://aka.ms/vsls-policies </string>
+    </stringTable>
+    <presentationTable>
+      <!-- Presentations Simplified for brevity -->
+      <presentation id="LiveShare_DomainName_PresentationId">
+        <textBox refId="LiveShare_DomainName_TextBox">
+          <label>Enter Domain Name:</label>
+        </textBox>
+      </presentation>
+    </presentationTable>
+  </resources>
+</policyDefinitionResources>
