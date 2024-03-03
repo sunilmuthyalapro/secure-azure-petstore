@@ -1,0 +1,19 @@
+WindowsHelloForBusinessPolicy:
+  ConfigureWindowsHelloForBusiness: Enabled
+  TPMChipRequirement: Required
+  PINLength:
+    Minimum: 6
+    Maximum: 127
+  PINCharacterRequirements:
+    LowercaseLetters: Required
+    UppercaseLetters: Required
+    SpecialCharacters: Required
+  SpecialCharactersList: "! \" # $ % & ' ( ) * + , - . / : ; < = > ? @ [ \\ ] ^ _ ` { | } ~"
+  PINExpirationDays: 41
+  RememberPINHistory:
+    NumberOfPINs: 5
+  BiometricAuthentication: Yes
+  EnhancedAntiSpoofing: Yes
+  PhoneSignIn: Yes
+  EnhancedSignInSecurity: Default
+  SecurityKeysForSignIn: Enable
