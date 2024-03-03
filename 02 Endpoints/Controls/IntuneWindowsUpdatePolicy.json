@@ -1,0 +1,35 @@
+{
+  "@odata.type": "#microsoft.graph.windowsUpdateForBusinessConfiguration",
+  "displayName": "Windows Update Policy",
+  "updateQuality": "businessReady",
+  "deliveryOptimizationMode": "httpOnly",
+  "automaticUpdateMode": "notifyDownload",
+  "scheduledInstallDay": "everyday",
+  "scheduledInstallTime": "03:00:00",
+  "rebootBehavior": "allow",
+  "nonBusinessHoursUpdateBehavior": "autoInstallAtMaintenanceTime",
+  "updateBlocks": [
+    {
+      "description": "Block driver updates",
+      "expirationDateTime": "2025-01-01T00:00:00Z",
+      "updateState": "block"
+    }
+  ],
+  "userInteractionRequired": true,
+  "userPauseAccess": "allowed",
+  "userRestart": "allow",
+  "userWindowsUpdateScanAccess": "blocked",
+  "allowNonMicrosoftSignedUpdate": false,
+  "allowUpdateService": true,
+  "enginesBlockedForFeaturesUpdates": [
+    "Windows Update"
+  ],
+  "enginesBlockedForQualityUpdates": [
+    "Windows Update"
+  ],
+  "deadlineForFeatureUpdatesInDays": 30,
+  "deadlineForQualityUpdatesInDays": 7,
+  "featureUpdateDeferralPeriodInDays": 30,
+  "qualityUpdateDeferralPeriodInDays": 7,
+  "microsoftUpdateServiceAllowed": true
+}
