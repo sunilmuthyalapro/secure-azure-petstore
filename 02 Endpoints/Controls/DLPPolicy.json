@@ -1,0 +1,110 @@
+{
+  "displayName": "Endpoint DLP Policy",
+  "description": "This policy enforces data loss prevention measures on endpoint devices.",
+  "isEnabled": true,
+  "conditions": {
+    "contentContains": {
+      "sensitiveInfoTypes": [
+        {
+          "id": "SensitiveInfoType1"
+        },
+        {
+          "id": "SensitiveInfoType2"
+        }
+      ],
+      "sensitivityLabels": [
+        {
+          "id": "SensitivityLabel1"
+        },
+        {
+          "id": "SensitivityLabel2"
+        }
+      ],
+      "trainableClassifiers": [
+        {
+          "id": "TrainableClassifier1"
+        },
+        {
+          "id": "TrainableClassifier2"
+        }
+      ],
+      "contentNotLabeled": true,
+      "documentProtectedByPassword": true,
+      "fileType": [
+        "WordProcessing",
+        "Spreadsheet",
+        "Presentation",
+        "Archive",
+        "Mail"
+      ],
+      "fileExtension": [
+        "doc",
+        "docx",
+        "pdf",
+        "xls",
+        "xlsx",
+        "csv",
+        "tsv",
+        "ppt",
+        "zip",
+        "zipx",
+        "rar",
+        "7z",
+        "tar",
+        "outlook",
+        "ost",
+        "msg"
+      ],
+      "userAccessesSensitiveSiteFromEdge": true
+    }
+  },
+  "actions": {
+    "restrictActivitiesOnDevices": {
+      "serviceDomainAndBrowserActivities": true,
+      "uploadToRestrictedCloudServiceDomainOrAccessFromUnallowedBrowsers": true,
+      "fileActivitiesForAllApps": true,
+      "copyToClipboard": true,
+      "copyToUSBRemovableMedia": true,
+      "copyToNetworkShare": true,
+      "print": true,
+      "copyOrMoveUsingUnallowedBluetoothApp": true,
+      "copyOrMoveUsingRDP": true,
+      "fileActivitiesForAppsInRestrictedAppGroups": true,
+      "restrictedAppActivities": true
+    }
+  },
+  "notifications": {
+    "userNotifications": {
+      "endpointDevices": {
+        "enabled": true,
+        "notificationText": "Sensitive content detected. Action restricted."
+      },
+      "microsoft365Services": {
+        "enabled": true,
+        "notificationText": "Policy tip: Sensitive content detected. Please review and take appropriate action."
+      },
+      "emailNotifications": {
+        "enabled": true,
+        "sender": "dlp@yourorganization.com",
+        "recipients": [
+          "admin1@yourorganization.com",
+          "admin2@yourorganization.com"
+        ],
+        "customEmailText": "Sensitive content was detected in your recent activity. Please ensure compliance with company policies.",
+        "customEmailSubject": "DLP Policy Violation Notification"
+      }
+    },
+    "incidentReports": {
+      "severity": "High",
+      "alertAdmins": {
+        "enabled": true,
+        "recipients": [
+          "admin1@yourorganization.com",
+          "admin2@yourorganization.com"
+        ],
+        "triggerCondition": "ThresholdReached",
+        "thresholdVolume": 10
+      }
+    }
+  }
+}
