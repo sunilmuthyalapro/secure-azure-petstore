@@ -1,4 +1,4 @@
 
 #Security controls for network
 
-![SASETunnel](https://github.com/sunilmuthyalapro/secure-azure-petstore/assets/138375291/21bb48d1-7336-4da6-a27a-42a39c1a0961)
+![Networksetup](https://github.com/sunilmuthyalapro/secure-azure-petstore/assets/138375291/0f6dcacb-11c6-46ec-b5b3-13afc04dc9a3)
